@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:15:51 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/06 06:22:29 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/06 06:32:34 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ class Fixed
 
   public:
 	Fixed();
+	Fixed(const int nb);
+	Fixed(const float nb);
 	Fixed(const Fixed &fixed);
-	Fixed &operator=(const Fixed &fixed);
 	~Fixed();
+
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
+	int toInt(void) const;
+	float toFloat(void) const;
 };
 #endif
