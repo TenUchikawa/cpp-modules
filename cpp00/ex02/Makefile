@@ -25,15 +25,12 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			@($(CC) $(FLAGS) $(INCLUDE) $(OBJS) -o $(NAME))
-			@echo "$(CYAN) [ OK ] | $(CYAN_B)$(NAME)$(END) $(CYAN)ready!$(END)"
 
 clean:
 			@($(RM) $(OBJ_D))
-			@echo "$(GREEN) [ OK ] | Objects removed!$(END)"
 
 fclean: 	clean
 			@($(RM) $(NAME))
-			@echo "$(GREEN) [ OK ] | Everything is clean!$(END)"
 
 re: 		fclean all
 
