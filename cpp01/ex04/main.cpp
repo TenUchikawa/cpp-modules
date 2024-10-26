@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 02:26:51 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/02 03:26:48 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:55:37 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@
 
 std::string replaceAllString(std::string str, std::string s1, std::string s2)
 {
-	int	index;
-
+	std::string::size_type index;
 	std::string newLine;
 	while ((index = str.find(s1)) != std::string::npos)
 	{
@@ -39,8 +38,6 @@ std::string replaceAllString(std::string str, std::string s1, std::string s2)
 	newLine += str;
 	return (newLine);
 }
-
-
 
 int	main(int argc, char **argv)
 {

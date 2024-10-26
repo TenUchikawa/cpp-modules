@@ -6,13 +6,13 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 14:42:01 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/02 15:11:41 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/27 00:59:25 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl(/* args */)
+Harl::Harl()
 {
 }
 
