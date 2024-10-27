@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:15:53 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/27 18:12:27 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 02:13:26 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,18 @@ bool Fixed::operator!=(const Fixed &other) const
 Fixed Fixed::operator+(const Fixed &other) const
 {
 	return (Fixed(this->toFloat() + other.toFloat()));
-};
+}
+
 Fixed Fixed::operator-(const Fixed &other) const
 {
 	return (Fixed(this->toFloat() - other.toFloat()));
-};
+}
+
 Fixed Fixed::operator*(const Fixed &other) const
 {
 	return (Fixed(this->toFloat() * other.toFloat()));
-};
+}
+
 Fixed Fixed::operator/(const Fixed &other) const
 {
 	if (this->_fixedPointValue == 0 || other._fixedPointValue == 0)
@@ -118,7 +121,7 @@ Fixed Fixed::operator/(const Fixed &other) const
 		return (Fixed());
 	}
 	return (Fixed(this->toFloat() / other.toFloat()));
-};
+}
 
 // increase decrease
 

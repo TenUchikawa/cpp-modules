@@ -6,23 +6,40 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:15:56 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/27 15:30:56 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 02:25:19 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
+#include "Point.hpp"
 #include <iostream>
+
+
+/*
+
+三角形ABC（元の三角形）が、以下3つの三角の合計面積と一緒か判定する
+点 P を使って作られる3つの小三角形：
+三角形 ABP の面積
+三角形 BCP の面積
+三角形 CAP の面積
+*/
+
 
 int	main(void)
 {
-	Fixed a;
-	Fixed const b(Fixed(5.05f) * Fixed(2));
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max(a, b) << std::endl;
+	Point a(0, 0);
+	Point b(10, 0);
+	Point c(0, 10);
+	Point p(3, 3);
+
+	if (bsp(a, b, c, p))
+	{
+		std::cout << "The point is inside the triangle." << std::endl;
+	}
+	else
+	{
+		std::cout << "The point is outside the triangle." << std::endl;
+	}
+
 	return (0);
 }
