@@ -6,18 +6,20 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:21:47 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 19:28:02 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:59:10 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
-Brain::Brain() {
-    std::cout << "Brain constructor called" << std::endl;
+Brain::Brain()
+{
+	std::cout << "Brain constructor called" << std::endl;
 }
 
-Brain::~Brain() {
-    std::cout << "Brain destructor called" << std::endl;
+Brain::~Brain()
+{
+	std::cout << "Brain destructor called" << std::endl;
 }
 Brain::Brain(const Brain &other)
 {

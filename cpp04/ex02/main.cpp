@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:47:57 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 19:22:25 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:59:20 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int	main(void)
+int main(void)
 {
 	const Animal *j = new Dog();
 	const Animal *i = new Cat();

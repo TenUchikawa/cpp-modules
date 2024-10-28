@@ -6,23 +6,23 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:24:47 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 15:15:42 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:59:06 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONG_CAT_H
-# define WRONG_CAT_H
+#define WRONG_CAT_H
 
-# include "WrongAnimal.hpp"
+#include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal
 {
-  public:
+public:
 	WrongCat();
 	~WrongCat();
 	void makeSound() const;
 
-  private:
+private:
 };
 
 #endif

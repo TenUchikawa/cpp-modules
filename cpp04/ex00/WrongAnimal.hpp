@@ -6,21 +6,21 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:11:45 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 15:13:10 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:58:56 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONG_ANIMAL_HPP
-# define WRONG_ANIMAL_HPP
+#define WRONG_ANIMAL_HPP
 
-# include <iostream>
+#include <iostream>
 
 class WrongAnimal
 {
-  protected:
+protected:
 	std::string type;
 
-  public:
+public:
 	WrongAnimal();
 	WrongAnimal(std::string type);
 	~WrongAnimal();

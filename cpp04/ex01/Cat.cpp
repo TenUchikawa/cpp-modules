@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:24:47 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 19:34:37 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:59:02 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat() : Animal::Animal("Cat"), brain(new Brain())
 
 Cat::~Cat()
 {
-	delete	brain;
+	delete brain;
 
 	std::cout << "Cat destructor called" << std::endl;
 }
@@ -33,8 +33,8 @@ Cat &Cat::operator=(const Cat &other)
 {
 	if (this != &other)
 	{
-		Animal::operator=(other);  // 基底クラス部分を代入
-		delete	brain;
+		Animal::operator=(other); // 基底クラス部分を代入
+		delete brain;
 		brain = new Brain(*other.brain);
 	}
 	return (*this);
