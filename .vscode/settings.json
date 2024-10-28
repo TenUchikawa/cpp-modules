@@ -53,7 +53,7 @@
     "ranges": "cpp",
     "span": "cpp"
   },
-  // "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.editor.enableAutoCompletions": false,
   // cpp hppファイルだけ formatterはC/CPPの拡張機能を使う
 
   "[cpp]": {
