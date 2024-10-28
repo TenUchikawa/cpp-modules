@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:15:53 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/08 05:13:32 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:15:46 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ std::ostream &operator<<(std::ostream &oS, const Fixed &fixed)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	// std::cout << "getRawBits member function called" << std::endl;
 	return (this->_fixedPointValue);
 }
 
