@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:11:45 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:59:10 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/29 00:17:47 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	Animal(std::string type);
 	virtual ~Animal();
 	std::string getType() const;
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 };
 
 #endif
