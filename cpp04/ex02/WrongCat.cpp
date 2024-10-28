@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:56:36 by tuchikaw         ###   ########.fr       */
+/*   Created: 2024/10/28 14:24:47 by tuchikaw          #+#    #+#             */
+/*   Updated: 2024/10/28 15:11:00 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#include "WrongCat.hpp"
 
-#include "Animal.hpp"
-
-class Dog : public Animal
+WrongCat::WrongCat() : WrongAnimal::WrongAnimal("WrongCat")
 {
-public:
-	Dog();
-	~Dog();
-	void makeSound() const override;
-};
+}
 
-#endif
+WrongCat::~WrongCat()
+{
+	std::cout << "WrongCat destroyed" << std::endl;
+}
+
+void WrongCat::makeSound() const
+{
+	std::cout << "WrongCat makes sound" << std::endl;
+}

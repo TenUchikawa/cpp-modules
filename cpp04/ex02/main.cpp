@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:47:57 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:57:58 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:22:25 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,37 +16,33 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main(void)
+int	main(void)
 {
-	std::cout << "----- Correct Polymorphism Test -----" << std::endl;
-
-	// const Animal *meta = new Animal(); // 抽象クラスのインスタンス化はできない
 	const Animal *j = new Dog();
 	const Animal *i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	std::cout << "Deleting Dog and Cat objects..." << std::endl;
+	delete j; // 正しくDogのデストラクタが呼ばれる
+	delete i; // 正しくCatのデストラクタが呼ばれる
 
-	i->makeSound(); // Catのサウンドが出力される
-	j->makeSound(); // Dogのサウンドが出力される
-	// meta->makeSound(); // Animalのサウンドが出力される
+	std::cout << "\nCreating an array of Animals..." << std::endl;
+	const Animal *animals[4];
+	animals[0] = new Dog();
+	animals[1] = new Dog();
+	animals[2] = new Cat();
+	animals[3] = new Cat();
 
-	// delete meta;
-	delete j;
-	delete i;
+	std::cout << "Deleting the array of Animals..." << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		delete animals[i]; // 各Animalのデストラクタが正しく呼ばれる
+	}
 
-	std::cout << "\n----- Wrong Polymorphism Test -----" << std::endl;
-
-	const WrongAnimal *wrongAnimal = new WrongAnimal();
-	const WrongAnimal *wrongCat = new WrongCat();
-
-	std::cout << wrongCat->getType() << " " << std::endl;
-
-	wrongCat->makeSound();	  // 正しくないポリモーフィズムの例
-	wrongAnimal->makeSound(); // WrongAnimalのサウンド
-
-	delete wrongAnimal;
-	delete wrongCat;
+	// std::cout << "\nTesting deep copy..." << std::endl;
+	// Dog dog1;
+	// Dog dog2 = dog1; // 深いコピーのテスト
+	// Dog dog3;
+	// dog3 = dog1; // 代入演算子のテスト
 
 	return (0);
 }

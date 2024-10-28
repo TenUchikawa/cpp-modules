@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:56:36 by tuchikaw         ###   ########.fr       */
+/*   Created: 2024/10/28 15:21:47 by tuchikaw          #+#    #+#             */
+/*   Updated: 2024/10/28 19:28:02 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#include "Brain.hpp"
 
-#include "Animal.hpp"
+Brain::Brain() {
+    std::cout << "Brain constructor called" << std::endl;
+}
 
-class Dog : public Animal
+Brain::~Brain() {
+    std::cout << "Brain destructor called" << std::endl;
+}
+Brain::Brain(const Brain &other)
 {
-public:
-	Dog();
-	~Dog();
-	void makeSound() const override;
-};
+	this->operator=(other);
+}
 
-#endif
+Brain &Brain::operator=(const Brain &other)
+{
+	if (this != &other)
+	{
+		for (int i = 0; i < 100; i++)
+		{
+			this->ideas[i] = (&other)->ideas[i];
+		}
+	}
+	return (*this);
+}

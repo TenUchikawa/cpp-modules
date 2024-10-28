@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:56:36 by tuchikaw         ###   ########.fr       */
+/*   Created: 2024/10/28 14:24:47 by tuchikaw          #+#    #+#             */
+/*   Updated: 2024/10/28 19:18:43 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef CAT_H
+# define CAT_H
 
-#include "Animal.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
-public:
-	Dog();
-	~Dog();
-	void makeSound() const override;
+  public:
+	Cat();
+	~Cat();
+	Cat(const Cat &other);
+	Cat &operator=(const Cat &other);
+
+	void makeSound() const;
+
+  private:
+	Brain *brain;
 };
 
 #endif

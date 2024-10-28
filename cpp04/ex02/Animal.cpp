@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:56:36 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:26:03 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
-
 #include "Animal.hpp"
 
-class Dog : public Animal
+Animal::Animal() : type("Animal")
 {
-public:
-	Dog();
-	~Dog();
-	void makeSound() const override;
-};
+	std::cout << "Animal constructor called" << std::endl;
+}
 
-#endif
+Animal::Animal(std::string type) : type(type)
+{
+	std::cout << "Animal " << type << " constructor called" << std::endl;
+}
+
+Animal::~Animal()
+{
+	std::cout << "Animal " << type << " destroyed" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+	return (this->type);
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "Animal makes sound" << std::endl;
+}

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:56:36 by tuchikaw         ###   ########.fr       */
+/*   Created: 2024/10/28 14:11:45 by tuchikaw          #+#    #+#             */
+/*   Updated: 2024/10/28 18:59:51 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-#include "Animal.hpp"
+# include <iostream>
 
-class Dog : public Animal
+class Animal
 {
-public:
-	Dog();
-	~Dog();
-	void makeSound() const override;
+  protected:
+	std::string type;
+
+  public:
+	Animal();
+	Animal(std::string type);
+	virtual ~Animal();
+	std::string getType() const;
+	virtual void makeSound() const;
 };
 
 #endif

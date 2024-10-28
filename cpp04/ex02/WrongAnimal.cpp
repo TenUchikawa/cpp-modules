@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 20:56:36 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:10:12 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#include "WrongAnimal.hpp"
 
-#include "Animal.hpp"
-
-class Dog : public Animal
+WrongAnimal::WrongAnimal()
 {
-public:
-	Dog();
-	~Dog();
-	void makeSound() const override;
-};
+	std::cout << "WrongAnimal constructor called" << std::endl;
+}
 
-#endif
+WrongAnimal::WrongAnimal(std::string type) : type(type)
+{
+	std::cout << "WrongAnimal " << type << " constructor called" << std::endl;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "WrongAnimal destroyed" << std::endl;
+}
+
+std::string WrongAnimal::getType() const
+{
+	return (this->type);
+}
+
+void WrongAnimal::makeSound() const
+{
+	std::cout << "WrongAnimal makes sound" << std::endl;
+}
