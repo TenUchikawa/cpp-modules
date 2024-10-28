@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 15:02:14 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:20:45 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DOG_H
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -21,6 +22,9 @@ class Dog : public Animal
 	Dog();
 	~Dog();
 	void makeSound() const;
+
+  private:
+	Brain *brain;
 };
 
 #endif
