@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:47:57 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 17:28:22 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:22:25 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ int	main(void)
 	{
 		delete animals[i]; // 各Animalのデストラクタが正しく呼ばれる
 	}
+
+	// std::cout << "\nTesting deep copy..." << std::endl;
+	// Dog dog1;
+	// Dog dog2 = dog1; // 深いコピーのテスト
+	// Dog dog3;
+	// dog3 = dog1; // 代入演算子のテスト
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:21:47 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 17:23:48 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:16:30 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class Brain
 {
   public:
 	Brain();
-	Brain(Brain &other);
-	Brain &operator=(Brain &other);
+	Brain(const Brain &other);
+	Brain &operator=(const Brain &other);
 	~Brain();
 
   private:

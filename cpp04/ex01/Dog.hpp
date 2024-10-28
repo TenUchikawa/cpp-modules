@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:24:50 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/28 17:20:45 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:16:06 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ class Dog : public Animal
   public:
 	Dog();
 	~Dog();
+	Dog(const Dog &other);
+	Dog &operator=(const Dog &other);
+
 	void makeSound() const;
 
   private:
