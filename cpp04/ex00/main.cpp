@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:47:57 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/10/29 00:09:27 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/10/29 01:37:05 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(void)
 	j->makeSound();	   // Dogのサウンドが出力される
 	meta->makeSound(); // Animalのサウンドが出力される
 
-	// delete meta;
+	delete meta;
 	delete j;
 	delete i;
 
