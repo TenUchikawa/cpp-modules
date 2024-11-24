@@ -51,7 +51,8 @@
     "typeinfo": "cpp",
     "fstream": "cpp",
     "ranges": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "map": "cpp"
   },
   "github.copilot.editor.enableAutoCompletions": false,
   // cpp hppファイルだけ formatterはC/CPPの拡張機能を使う

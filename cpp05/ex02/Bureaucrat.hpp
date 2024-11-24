@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 19:53:11 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 13:58:01 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:21:04 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
+
+class AForm;
 
 class Bureaucrat
 {
@@ -38,6 +40,7 @@ public:
 			return "Grade is too low!";
 		}
 	};
+
 	Bureaucrat(std::string name, int grade);
 	Bureaucrat(Bureaucrat const &src);
 	~Bureaucrat();
@@ -49,6 +52,10 @@ public:
 
 	const std::string &getName() const;
 	int getGrade() const;
+
+	void signForm(AForm &form);
+
+	void executeForm(AForm const &form);
 
 private:
 	const std::string _name;

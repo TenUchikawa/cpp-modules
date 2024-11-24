@@ -6,11 +6,12 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 19:53:10 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 13:54:02 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2024/11/24 14:27:52 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp" // Formの完全な定義が必要
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -74,6 +75,21 @@ void Bureaucrat::decrementGrade()
 	if (_grade - 1 < 1)
 		throw GradeTooHighException();
 	_grade--;
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+
+		std::cout << _name << " couldn’t sign " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 /*
