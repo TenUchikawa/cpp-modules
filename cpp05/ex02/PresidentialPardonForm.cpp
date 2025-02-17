@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:24:59 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 16:27:44 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:20:19 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,18 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("Pres
 {
 }
 
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src) : AForm(src), _target(src._target) {}
+
+
+PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm  &rhs)
+{
+	if (this != &rhs)
+	{
+		AForm::operator=(rhs);
+		_target = rhs._target;
+	}
+	return *this;
+}
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */

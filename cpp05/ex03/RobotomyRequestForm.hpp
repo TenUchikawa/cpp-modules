@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:24:47 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 16:21:41 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:15:44 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ class RobotomyRequestForm : public AForm
 
 public:
 	RobotomyRequestForm(std::string target = "Default");
+	RobotomyRequestForm(const RobotomyRequestForm &src);
 	virtual ~RobotomyRequestForm();
 
+	RobotomyRequestForm &		operator=( RobotomyRequestForm const & rhs );
+
 private:
-	const std::string _target;
+	std::string _target;
 
 protected:
 	void executeAction() const;

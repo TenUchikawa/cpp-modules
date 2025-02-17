@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:24:38 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 16:22:53 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:16:34 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ class ShrubberyCreationForm : public AForm
 
 public:
 	ShrubberyCreationForm(std::string target = "Default");
+	ShrubberyCreationForm(const ShrubberyCreationForm &src);
 	~ShrubberyCreationForm();
 
+	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+
 private:
-	const std::string _target;
+	std::string _target;
 
 protected:
 	void executeAction() const;

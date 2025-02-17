@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:24:47 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 15:53:20 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:15:36 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@
 */
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("Robotomy Request", 72, 45), _target(target) {}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src) : AForm(src), _target(src._target) {}
+
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs)
+{
+	if (this != &rhs)
+	{
+		AForm::operator=(rhs);
+		_target = rhs._target;
+	}
+	return *this;
+}
+
+
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------

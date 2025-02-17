@@ -23,7 +23,23 @@
 
 	"mounts": [
 		"type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/vscode/.ssh,readonly"
-	]
+	],
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.makefile-tools",
+				"ms-vscode.cmake-tools",
+				"frfreyCanonicalClassCPP.canonicalclasscpp",
+				"DoKca.42-ft-count-line",
+				"keyhr.42-c-format",
+				"kube.42header",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
 
 	
 }

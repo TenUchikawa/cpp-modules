@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:24:37 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 16:25:11 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:20:22 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,17 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrubb
 {
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src) : AForm(src), _target(src._target) {}
+
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs)
+{
+	if (this != &rhs)
+	{
+		AForm::operator=(rhs);
+		_target = rhs._target;
+	}
+	return *this;
+}
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */

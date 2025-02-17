@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:24:59 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 16:27:22 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:15:16 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ class PresidentialPardonForm : public AForm
 
 public:
 	PresidentialPardonForm(std::string target = "Default");
+	PresidentialPardonForm(const PresidentialPardonForm &src);
 	~PresidentialPardonForm();
 
+	PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
+
 private:
-	const std::string _target;
+	std::string _target;
 
 protected:
 	void executeAction() const;
