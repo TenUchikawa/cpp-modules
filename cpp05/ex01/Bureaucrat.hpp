@@ -42,7 +42,7 @@ public:
 		}
 	};
 
-	Bureaucrat(std::string name, int grade);
+	Bureaucrat(std::string name = "Default", int grade = 1);
 	Bureaucrat(Bureaucrat const &src);
 	~Bureaucrat();
 

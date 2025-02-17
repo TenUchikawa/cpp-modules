@@ -40,7 +40,7 @@ public:
 		}
 	};
 
-	Form(std::string name, int gradeToSign, int gradeToExecute);
+	Form(std::string name = "Default", int gradeToSign = 1, int gradeToExecute = 1);
 	Form(Form const &src);
 	~Form();
 

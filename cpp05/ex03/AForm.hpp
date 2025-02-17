@@ -37,7 +37,7 @@ public:
 		virtual const char *what() const throw() { return "Form is not signed!"; }
 	};
 
-	AForm(std::string name, int gradeToSign, int gradeToExecute);
+	AForm(std::string name = "Default", int gradeToSign = 1, int gradeToExecute = 1);
 	AForm(AForm const &src);
 	virtual ~AForm();
 	AForm &operator=(AForm const &rhs);

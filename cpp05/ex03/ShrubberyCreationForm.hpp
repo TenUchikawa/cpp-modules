@@ -21,7 +21,7 @@ class ShrubberyCreationForm : public AForm
 {
 
 public:
-	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(std::string target = "Default");
 	~ShrubberyCreationForm();
 
 private:
