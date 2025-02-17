@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 16:34:18 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/11/24 16:46:06 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:30:34 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ public:
 private:
 };
 
-std::ostream &operator<<(std::ostream &o, Intern const &i);
 
 #endif /* ********************************************************** INTERN_H */
