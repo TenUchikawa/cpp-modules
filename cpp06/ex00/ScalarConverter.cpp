@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:12:09 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/04/06 16:03:32 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/04/06 16:03:35 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ void ScalarConverter::convert(const std::string &literal)
 		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: " << literal << "f" << std::endl;
 		std::cout << "double: " << literal << std::endl;
-
-		std::cout << "double: " << (literal.find("f") != std::string::npos ? literal.substr(0, literal.size() - 1) : literal) << std::endl;
 		return;
 	}
 

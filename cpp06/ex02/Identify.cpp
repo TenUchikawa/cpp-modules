@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:56 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/03/27 17:34:33 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/04/06 17:24:06 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,31 @@ void identify(Base *p)
 
 void identify(Base &p)
 {
-    if (dynamic_cast<A *>(&p))
+
+    try
+    {
+        (void)dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
-    else if (dynamic_cast<B *>(&p))
-        std::cout << "B" << std::endl;
-    else if (dynamic_cast<C *>(&p))
-        std::cout << "C" << std::endl;
-    else
-        std::cout << "Unknown" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        try
+        {
+            (void)dynamic_cast<B&>(p);
+            std::cout << "B" << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            try
+            {
+                (void)dynamic_cast<C&>(p);
+                std::cout << "C" << std::endl;
+            }
+            catch(const std::exception& e)
+            {
+                (void)e;
+                std::cerr << "Unknown" << std::endl;
+            }
+        }
+    }
 }
