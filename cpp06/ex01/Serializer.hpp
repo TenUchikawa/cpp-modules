@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:18 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/03/02 08:14:19 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:21:50 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 
 #include "Data.hpp"
 #include <stdint.h>
+#include <stdexcept>
 
-class Serializer {
+class Serializer
+{
 public:
-    static uintptr_t serialize(Data* ptr);
-    static Data* deserialize(uintptr_t raw);
+    static uintptr_t serialize(Data *ptr);
+    static Data *deserialize(uintptr_t raw);
+
 private:
     // インスタンス化禁止
     Serializer();

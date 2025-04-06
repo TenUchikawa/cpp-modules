@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:58 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/03/02 08:14:59 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:24:38 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include "Base.hpp"
 
-Base* generate();
-void identify(Base* p);
-void identify(Base& p);
+Base *generate();
+void identify(Base *p);
+void identify(Base &p);
 
 #endif

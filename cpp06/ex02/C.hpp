@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:53 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/03/02 08:14:54 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:25:29 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "Base.hpp"
 
-class C : public Base {};
+class C : public Base
+{
+};
 
 #endif

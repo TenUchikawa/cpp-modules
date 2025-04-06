@@ -6,16 +6,19 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:25 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/03/02 08:14:26 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:25:33 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BASE_HPP
 #define BASE_HPP
 
-class Base {
+class Base
+{
 public:
-    virtual ~Base() {}
+    virtual ~Base()
+    {
+    }
 };
 
 #endif

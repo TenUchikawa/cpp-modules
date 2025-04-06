@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:56 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/03/02 08:14:57 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:34:33 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,47 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <random>
 
-Base* generate() {
-    std::srand(static_cast<unsigned int>(std::time(0)));
-    int r = std::rand() % 3;
-    if (r == 0)
+Base *generate()
+{
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    static std::uniform_int_distribution<int> dis(0, 2);
+
+    int random_value = dis(gen);
+    switch (random_value)
+    {
+    case 0:
         return new A();
-    else if (r == 1)
+    case 1:
         return new B();
-    else
+    case 2:
         return new C();
+    default:
+        return nullptr; // 念のため
+    }
 }
 
-void identify(Base* p) {
-    if (dynamic_cast<A*>(p))
+void identify(Base *p)
+{
+    if (dynamic_cast<A *>(p))
         std::cout << "A" << std::endl;
-    else if (dynamic_cast<B*>(p))
+    else if (dynamic_cast<B *>(p))
         std::cout << "B" << std::endl;
-    else if (dynamic_cast<C*>(p))
+    else if (dynamic_cast<C *>(p))
         std::cout << "C" << std::endl;
     else
         std::cout << "Unknown" << std::endl;
 }
 
-void identify(Base& p) {
-    if (dynamic_cast<A*>(&p))
+void identify(Base &p)
+{
+    if (dynamic_cast<A *>(&p))
         std::cout << "A" << std::endl;
-    else if (dynamic_cast<B*>(&p))
+    else if (dynamic_cast<B *>(&p))
         std::cout << "B" << std::endl;
-    else if (dynamic_cast<C*>(&p))
+    else if (dynamic_cast<C *>(&p))
         std::cout << "C" << std::endl;
     else
         std::cout << "Unknown" << std::endl;
