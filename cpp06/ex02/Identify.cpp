@@ -6,7 +6,7 @@
 /*   By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:14:56 by tuchikaw          #+#    #+#             */
-/*   Updated: 2025/04/06 17:24:06 by tuchikaw         ###   ########.fr       */
+/*   Updated: 2025/04/10 14:57:08 by tuchikaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <random>
 
 Base *generate()
 {
-    static std::random_device rd;
-    static std::mt19937 gen(rd());
-    static std::uniform_int_distribution<int> dis(0, 2);
+    std::srand(time(NULL));
 
-    int random_value = dis(gen);
-    switch (random_value)
+	int	random = rand() % 3;
+    switch (random)
     {
     case 0:
         return new A();
@@ -35,7 +32,7 @@ Base *generate()
     case 2:
         return new C();
     default:
-        return nullptr; // 念のため
+        return NULL; // 念のため
     }
 }
 

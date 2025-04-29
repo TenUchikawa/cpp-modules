@@ -6,14 +6,14 @@
 #    By: tuchikaw <tuchikaw@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 16:02:28 by tuchikaw          #+#    #+#              #
-#    Updated: 2025/03/27 17:34:27 by tuchikaw         ###   ########.fr        #
+#    Updated: 2025/04/10 14:50:00 by tuchikaw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME	=	base
 CC		=	c++
-FLAGS	=	-Wall -Wextra -Werror -std=c++11
+FLAGS	=	-Wall -Wextra -Werror -std=c++98
 INCLUDE	=	-I includes
 RM		=	rm -rf
 
